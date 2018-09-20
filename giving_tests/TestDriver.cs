@@ -10,13 +10,16 @@ namespace giving_tests
 {
     public class TestDriver
     {
-        private readonly IWebDriver driver = new ChromeDriver("C:\\Source\\giving_tests\\giving_tests\\bin\\Debug");
+       private readonly IWebDriver driver = new ChromeDriver("C:\\Source\\giving_tests\\giving_tests\\bin\\Debug");
 
         //public GivingPage(IWebDriver driver)
-        public TestDriver(IWebDriver driver)
+        //public TestDriver(IWebDriver driver)
+        public TestDriver()
         {
-            this.driver = driver;
+            //this.driver = driver;
 
         }
+
+       
     }
 }

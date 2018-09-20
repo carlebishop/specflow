@@ -11,7 +11,6 @@ namespace giving_tests
     public class GivingLoginPage
     {
         private readonly IWebDriver driver = new ChromeDriver("C:\\Source\\giving_tests\\giving_tests\\bin\\Debug");
-
         // Global variables from the Katalon demo - should convert external data and pass in as params
         private readonly string startUrl = "https://test.easytithe.elexio.me/cp3o/Account/Login";
         private readonly string userName = "amandeep.singh@ministrybrands.com";
