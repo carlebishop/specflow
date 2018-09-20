@@ -14,7 +14,17 @@ namespace RunTests
             GivingLoginPage startPage = new GivingLoginPage();
             Console.WriteLine("Initialized Page " + startPage.ToString());
             Test1Steps steps = new Test1Steps(startPage);
-            steps.Runem();
+
+            Console.WriteLine("Running tests");
+            bool rc = steps.Runem();
+            if (rc)
+            {
+                Console.WriteLine("Success!");
+            }
+            else
+            {
+                Console.WriteLine("Tests Failed");
+            }
         }
     }
 }

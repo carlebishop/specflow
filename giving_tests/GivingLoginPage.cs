@@ -10,7 +10,6 @@ namespace giving_tests
 {
     public class GivingLoginPage
     {
-        //private readonly IWebDriver driver = new ChromeDriver("C:\\Source\\giving_tests\\giving_tests\\bin\\Debug");
         // Global variables from the Katalon demo - should convert external data and pass in as params
         private readonly string startUrl = "https://test.easytithe.elexio.me/cp3o/Account/Login";
         private readonly string userName = "amandeep.singh@ministrybrands.com";
@@ -52,6 +51,7 @@ namespace giving_tests
 
         public void NavToPage()
         {
+
             driver.Navigate().GoToUrl(startUrl);
             driver.Manage().Window.Maximize();
 
@@ -63,8 +63,11 @@ namespace giving_tests
             LoginUserName.SendKeys(userName);
             LoginPassword.SendKeys(userPassWord);
             LoginButton.Click();
-
-
+            if (driver.Title != "Easy Tithe - Dashboard")
+            {
+                return false;
+            }
+          
             return true;
         }
     }
