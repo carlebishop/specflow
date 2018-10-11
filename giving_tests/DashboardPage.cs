@@ -11,36 +11,14 @@ namespace giving_tests
     public class DashboardPage
     {
 
-        IWebDriver driver = TestDriver.Instance.driver;
-        public DashboardPage()
+        private readonly IWebDriver _driver;
+        public DashboardPage(IWebDriver driver)
         {
+            _driver = driver;
         }
 
-        private IWebElement Organization
-        {
-            get
-            {
-                //string x = "id('usertray')/li[@class='dropdown']/a[class='dropdown.toggle']";
+        public string UserName => _driver.FindElement(By.Id("user-name")).Text;   // C#6 getter
 
-                //return this.driver.FindElement(By.XPath(x));
-         
-                return this.driver.FindElement(By.XPath("//ul[@id='usertray']/li[2]/a/spanVirtualTerminal"));
-              
-            }
-        }
-
-        public bool CheckforOrganizationElement()
-        {
-            if (Organization == null)
-            {
-                return false;
-            }
-            else
-            {
-                Organization.Click();
-                return true;
-            }
-            
-        }
+ 
     }
 }

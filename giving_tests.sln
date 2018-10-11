@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "giving_tests", "giving_tests\giving_tests.csproj", "{F7347BC6-9D94-4A90-8352-57343BA8B6F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunTests", "RunTests\RunTests.csproj", "{1A45F7C8-1256-4FC1-AE7C-2D1EB3FBC636}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoSpecFlow", "..\..\Users\carlb\source\repos\DemoSpecFlow\DemoSpecFlow\DemoSpecFlow.csproj", "{8BA16732-DB93-4E83-B3E8-FE5003DCEB3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F7347BC6-9D94-4A90-8352-57343BA8B6F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7347BC6-9D94-4A90-8352-57343BA8B6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7347BC6-9D94-4A90-8352-57343BA8B6F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A45F7C8-1256-4FC1-AE7C-2D1EB3FBC636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A45F7C8-1256-4FC1-AE7C-2D1EB3FBC636}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A45F7C8-1256-4FC1-AE7C-2D1EB3FBC636}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A45F7C8-1256-4FC1-AE7C-2D1EB3FBC636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BA16732-DB93-4E83-B3E8-FE5003DCEB3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA16732-DB93-4E83-B3E8-FE5003DCEB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BA16732-DB93-4E83-B3E8-FE5003DCEB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BA16732-DB93-4E83-B3E8-FE5003DCEB3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

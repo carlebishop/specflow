@@ -11,68 +11,47 @@ namespace giving_tests
     public class GivingLoginPage
     {
         // Global variables from the Katalon demo - should convert external data and pass in as params
-        private readonly string startUrl = "https://test.easytithe.elexio.me/cp3o/Account/Login";
-        private readonly string userName = "amandeep.singh@ministrybrands.com";
-        private readonly string userPassWord = "Parish10";
-        private readonly string transactionFundName = "DefaultFund";  
-        private readonly string transactionAmount = "DefaultAmt";
-        private readonly string transactionMessage = "DefaultMessage";
+        private const string startUrl = "https://test.easytithe.elexio.me/cp3o/Account/Login";
 
-        IWebDriver driver = TestDriver.Instance.driver;
-     
-        //public GivingPage(IWebDriver driver)
-        public GivingLoginPage()
-        {   
-        }
-        
-        private IWebElement LoginUserName
+
+        private readonly IWebDriver _driver;
+
+        public GivingLoginPage(IWebDriver driver)
         {
-            get
-            {
-                return this.driver.FindElement(By.Id("UserName"));
-            }
+            _driver = driver;
         }
 
-        private IWebElement LoginPassword
+        public static GivingLoginPage NavigateTo(IWebDriver driver)
         {
-            get
-            {
-                return this.driver.FindElement(By.Id("Password"));
-            }
-        }
-
-        private IWebElement LoginButton
-        {
-            get
-            {
-                return this.driver.FindElement(By.Id("login"));
-            }
-        }
-
-        public void NavToPage()
-        {
-
             driver.Navigate().GoToUrl(startUrl);
-            driver.Manage().Window.Maximize();
-
-            return;
+            return new GivingLoginPage(driver);
         }
 
-        public bool LogIn()
+        public string LoginUserName
         {
-            LoginUserName.SendKeys(userName);
-            LoginPassword.SendKeys(userPassWord);
-            LoginButton.Click();
-            if (driver.Title != "Easy Tithe - Dashboard")
+            set
             {
-                return false;
+                _driver.FindElement(By.Id("UserName")).SendKeys(value);
             }
-          
-            return true;
         }
+
+        public string LoginPassword
+        {
+            set
+            {
+                _driver.FindElement(By.Id("Password")).SendKeys(value);
+            }
+        }
+
+        public DashboardPage PressLoginButton()
+        {
+            _driver.FindElement(By.Id("login")).Click();
+            return new DashboardPage(_driver);
+        }
+
+        public string ReturnLink => _driver.FindElement(By.LinkText("Return to Login")).Text;
     }
-
-
-    
-
 }
+   
+
+
