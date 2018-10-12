@@ -17,17 +17,17 @@ namespace giving_tests
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class GivingDemoFeature : Xunit.IClassFixture<GivingDemoFeature.FixtureData>, System.IDisposable
+    public partial class GivingPortalFeature : Xunit.IClassFixture<GivingPortalFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "GivingDemo.feature"
+#line 1 "GivingPortal.feature"
 #line hidden
         
-        public GivingDemoFeature(GivingDemoFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public GivingPortalFeature(GivingPortalFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -36,8 +36,7 @@ namespace giving_tests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Giving Demo", "\tIn order to show how giving automation could work\r\n\tAs a test developer\r\n\tI want" +
-                    " to show this demo", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "GivingPortal", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,46 +76,21 @@ namespace giving_tests
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Display Dashboard Page")]
-        [Xunit.TraitAttribute("FeatureTitle", "Giving Demo")]
-        [Xunit.TraitAttribute("Description", "Display Dashboard Page")]
-        [Xunit.TraitAttribute("Category", "Demoscenarios")]
-        public virtual void DisplayDashboardPage()
+        [Xunit.FactAttribute(DisplayName="Select Campus")]
+        [Xunit.TraitAttribute("FeatureTitle", "GivingPortal")]
+        [Xunit.TraitAttribute("Description", "Select Campus")]
+        public virtual void SelectCampus()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display Dashboard Page", null, new string[] {
-                        "Demoscenarios"});
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Campus", null, ((string[])(null)));
+#line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 8
- testRunner.Given("I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.And("I have entered my login information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
- testRunner.When("I press login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
- testRunner.Then("I should be on the dashboard screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Failed login")]
-        [Xunit.TraitAttribute("FeatureTitle", "Giving Demo")]
-        [Xunit.TraitAttribute("Description", "Failed login")]
-        public virtual void FailedLogin()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failed login", null, ((string[])(null)));
-#line 13
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 14
- testRunner.Given("I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 15
- testRunner.And("I have entered \"badlogin@badlxxxogin.com\" for a userid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
- testRunner.When("I press login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
- testRunner.Then("I should get a failed login message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 4
+ testRunner.Given("I am on the portal page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 5
+ testRunner.When("I select the East campus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 6
+ testRunner.Then("the East campus giving page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -128,12 +102,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                GivingDemoFeature.FeatureSetup();
+                GivingPortalFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                GivingDemoFeature.FeatureTearDown();
+                GivingPortalFeature.FeatureTearDown();
             }
         }
     }

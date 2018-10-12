@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,7 +50,28 @@ namespace giving_tests
             return new DashboardPage(_driver);
         }
 
-        public string ReturnLink => _driver.FindElement(By.LinkText("Return to Login")).Text;
+        //public string ReturnLink => _driver.FindElement(By.LinkText("Return to Login")).Text;
+       //public string ValidationError => _driver.FindElement(By.Name("li")).ToString();
+
+        public bool ValidationErrorPresent()
+        {
+            // The error will either show up in the timeout as this link, or will show up as username or passowrd provided is incorrect
+            if (_driver.FindElement(By.LinkText("Return to Login")) != null)
+            {
+                return true;
+            }
+
+            ReadOnlyCollection<IWebElement> errorList = _driver.FindElements(By.TagName("li"));
+            foreach (IWebElement item in errorList)
+            {
+                if (item.Text == "The username or password provided is incorrect.")
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
    

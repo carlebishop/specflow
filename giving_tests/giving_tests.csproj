@@ -83,6 +83,14 @@
     </Compile>
     <Compile Include="GivingDemoSteps.cs" />
     <Compile Include="GivingLoginPage.cs" />
+    <Compile Include="GivingPortal.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GivingPortal.feature</DependentUpon>
+    </Compile>
+    <Compile Include="GivingPortalSteps.cs" />
+    <Compile Include="PortalGivingPage.cs" />
+    <Compile Include="PortalPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +98,10 @@
     <None Include="GivingDemo.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GivingDemo.feature.cs</LastGenOutput>
+    </None>
+    <None Include="GivingPortal.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GivingPortal.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

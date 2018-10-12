@@ -57,16 +57,16 @@ namespace giving_tests
         [Then]
         public void Then_I_should_get_a_failed_login_message()
         {
-            Assert.Equal("Return to Login", _givingLoginPage.ReturnLink);
+            Assert.True(_givingLoginPage.ValidationErrorPresent());
         }
 
 
 
-        [AfterScenario]
-        public void DisposeWebDriver()
-        {
-            _driver.Dispose();
-        }
+        //[AfterScenario]
+        //public void DisposeWebDriver()
+        //{
+           // _driver.Dispose();
+       // }
     }
 
     

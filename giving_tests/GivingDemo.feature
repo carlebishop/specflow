@@ -12,6 +12,6 @@ Scenario: Display Dashboard Page
 
 Scenario: Failed login
 	Given I am on the login page
-	And I have entered "badlogin@badlogin.com" for a userid
+	And I have entered "badlogin@badlxxxogin.com" for a userid
 	When I press login
 	Then I should get a failed login message
