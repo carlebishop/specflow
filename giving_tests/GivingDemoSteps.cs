@@ -45,6 +45,7 @@ namespace giving_tests
         public void Then_I_should_be_on_the_dashboard_screen()
         {
             Assert.Equal("Amandeep Singh", _dashboardPage.UserName);
+            _driver.Dispose();
         }
 
         [Given]
@@ -58,15 +59,15 @@ namespace giving_tests
         public void Then_I_should_get_a_failed_login_message()
         {
             Assert.True(_givingLoginPage.ValidationErrorPresent());
+            _driver.Dispose();
         }
 
-
-
+        
         //[AfterScenario]
         //public void DisposeWebDriver()
         //{
            // _driver.Dispose();
-       // }
+        //}
     }
 
     

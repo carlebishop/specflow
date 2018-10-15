@@ -11,7 +11,8 @@ namespace giving_tests
     {
         private IWebDriver _driver;
         private PortalPage _portalPage;
-        private PortalGivingPage _portalGivingPage;
+        private CampusGivingPage _campusGivingPage;
+
 
         [Given]
         public void Given_I_am_on_the_portal_page()
@@ -24,13 +25,17 @@ namespace giving_tests
         [When]
         public void When_I_select_the_CAMPUS_campus(string campus)
         {
-            //ScenarioContext.Current.Add("campus", campus);
+
+            // tbd - write a test that actually selects the link on the page rather than using the URL
+            _campusGivingPage = CampusGivingPage.NavigateTo(_driver, campus);
         }
         
         [Then]
         public void Then_the_CAMPUS_campus_giving_page_should_be_displayed(string campus)
         {
-            Assert.Equal(1, 1);
+            Assert.Contains("gpt/" + campus, _driver.Url);
+           _driver.Dispose();
         }
+
     }
 }

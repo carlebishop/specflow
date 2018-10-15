@@ -88,9 +88,33 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
  testRunner.Given("I am on the portal page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 5
- testRunner.When("I select the East campus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select the EAST campus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 6
- testRunner.Then("the East campus giving page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the EAST campus giving page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute(DisplayName="Go To Campus")]
+        [Xunit.TraitAttribute("FeatureTitle", "GivingPortal")]
+        [Xunit.TraitAttribute("Description", "Go To Campus")]
+        [Xunit.InlineDataAttribute("EAST", new string[0])]
+        [Xunit.InlineDataAttribute("MISSIONS", new string[0])]
+        [Xunit.InlineDataAttribute("ANOTHER", new string[0])]
+        [Xunit.InlineDataAttribute("NOWCAMPUS", new string[0])]
+        [Xunit.InlineDataAttribute("THENCAMPUS", new string[0])]
+        public virtual void GoToCampus(string campus, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Go To Campus", null, exampleTags);
+#line 8
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 9
+testRunner.Given("I am on the portal page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 10
+testRunner.When(string.Format("I select the {0} campus", campus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+testRunner.Then(string.Format("the {0} campus giving page should be displayed", campus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

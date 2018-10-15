@@ -55,11 +55,19 @@ namespace giving_tests
 
         public bool ValidationErrorPresent()
         {
-            // The error will either show up in the timeout as this link, or will show up as username or passowrd provided is incorrect
-            if (_driver.FindElement(By.LinkText("Return to Login")) != null)
+            // The error will either show up in the timeout as this link, or will show up as username or password provided is incorrect
+            try
             {
-                return true;
+                if (_driver.FindElement(By.LinkText("Return to Login")) != null)
+                {
+                    return true;
+                }
             }
+            catch (Exception e)
+            {
+                
+            }
+
 
             ReadOnlyCollection<IWebElement> errorList = _driver.FindElements(By.TagName("li"));
             foreach (IWebElement item in errorList)
