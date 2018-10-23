@@ -91,10 +91,12 @@
       <DependentUpon>GivingPortal.feature</DependentUpon>
     </Compile>
     <Compile Include="GivingPortalSteps.cs" />
+    <Compile Include="HooksFeature.cs" />
+    <Compile Include="HooksTestRun.cs" />
     <Compile Include="PortalGivingPage.cs" />
     <Compile Include="PortalPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScenarioBeforeAndAfter.cs" />
+    <Compile Include="HooksScenario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

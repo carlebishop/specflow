@@ -8,16 +8,17 @@ using TechTalk.SpecFlow;
 namespace giving_tests
 {
     [Binding]
-    internal class ScenarioBeforeAndAfter
+    internal class HooksScenario
     {
         [BeforeScenario]
-        public static void Before()
+        public void BeforeScenario()
         {
-            // runs before each scenario and scenario outline in example
+            var t = ScenarioContext.Current.ScenarioInfo.Title;
+            var x = FeatureContext.Current.FeatureInfo.Description;
         }
 
         [AfterScenario]
-        public static void After()
+        public void AfterScenario()
         {
             
         }
