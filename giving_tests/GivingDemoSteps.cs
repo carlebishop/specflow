@@ -19,6 +19,16 @@ namespace giving_tests
         private const string transactionAmount = "DefaultAmt";
         private const string transactionMessage = "DefaultMessage";
 
+        private GivingCommonDetails _givingCommonDetails;
+        /// <summary>
+        /// constructor to inject GivingCommonDetails for sharing between steps - Dependency Injection
+        /// </summary>
+        /// <param name="details"></param>
+        public GivingDemoSteps(GivingCommonDetails givingCommonDetails)
+        {
+            _givingCommonDetails = givingCommonDetails;
+        }
+
         [Given]
         public void Given_I_am_on_the_login_page()
         {
@@ -53,6 +63,8 @@ namespace giving_tests
         {
             _givingLoginPage.LoginUserName = badlogin;
             _givingLoginPage.LoginPassword = userPassWord;
+
+            _givingCommonDetails.SomeDetail = badlogin;  // example:  this would allow us to share this between steps
         }
 
         [Then]
@@ -63,12 +75,7 @@ namespace giving_tests
         }
 
         
-        //[AfterScenario]
-        //public void DisposeWebDriver()
-        //{
-           // _driver.Dispose();
-        //}
-    }
+     }
 
     
 }
