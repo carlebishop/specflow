@@ -1,7 +1,11 @@
 ﻿using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 using Xunit;
 
 namespace giving_tests
@@ -28,6 +32,7 @@ namespace giving_tests
 
             // tbd - write a test that actually selects the link on the page rather than using the URL
             _campusGivingPage = CampusGivingPage.NavigateTo(_driver, campus);
+
         }
         
         [Then]
@@ -35,6 +40,27 @@ namespace giving_tests
         {
             Assert.Contains("gpt/" + campus, _driver.Url);
            _driver.Dispose();
+        }
+
+        [Given(@"I have input the following users")]
+        public void GivenIHaveInputTheFollowingUsers(IEnumerable<NewUser> users)
+        {
+            // now we have a list of users we can iterate through
+            
+            // An alternate way would be to leave the weekly typed table and done this instead using Specflow.Assist
+            //IEnumerable<dynamic> users = table.CreateDynamicSet();
+        }
+
+        [When(@"I choose add")]
+        public void WhenIChooseAdd()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"the users should be added")]
+        public void ThenTheUsersShouldBeAdded()
+        {
+            ScenarioContext.Current.Pending();
         }
 
     }

@@ -119,6 +119,35 @@ testRunner.Then(string.Format("the {0} campus giving page should be displayed", 
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="TableExample")]
+        [Xunit.TraitAttribute("FeatureTitle", "GivingPortal")]
+        [Xunit.TraitAttribute("Description", "TableExample")]
+        public virtual void TableExample()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TableExample", null, ((string[])(null)));
+#line 21
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "FirstName",
+                        "LastName"});
+            table1.AddRow(new string[] {
+                        "Sarah",
+                        "Smith"});
+            table1.AddRow(new string[] {
+                        "Gentry",
+                        "Jones"});
+#line 22
+testRunner.Given("I have input the following users", ((string)(null)), table1, "Given ");
+#line 26
+testRunner.When("I choose add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+testRunner.Then("the users should be added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable
