@@ -13,8 +13,8 @@ namespace giving_tests
         [BeforeScenario]
         public void BeforeScenario()
         {
-            var t = ScenarioContext.Current.ScenarioInfo.Title;
-            var x = FeatureContext.Current.FeatureInfo.Description;
+            //var t = ScenarioContext.Current.ScenarioInfo.Title;
+            //var x = FeatureContext.Current.FeatureInfo.Description;
         }
 
         [AfterScenario]

@@ -54,13 +54,13 @@ namespace giving_tests
         [When(@"I choose add")]
         public void WhenIChooseAdd()
         {
-            ScenarioContext.Current.Pending();
+            //ScenarioContext.Current.Pending();
         }
 
         [Then(@"the users should be added")]
         public void ThenTheUsersShouldBeAdded()
         {
-            ScenarioContext.Current.Pending();
+            //ScenarioContext.Current.Pending();
         }
 
     }

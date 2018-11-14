@@ -10,24 +10,24 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace giving_tests
+namespace giving_tests.Features
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class GivingDemoFeature : Xunit.IClassFixture<GivingDemoFeature.FixtureData>, System.IDisposable
+    public partial class G4Feature : Xunit.IClassFixture<G4Feature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "GivingDemo.feature"
+#line 1 "G4.feature"
 #line hidden
         
-        public GivingDemoFeature(GivingDemoFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public G4Feature(G4Feature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -36,8 +36,7 @@ namespace giving_tests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Giving Demo", "\tIn order to show how giving automation could work\r\n\tAs a test developer\r\n\tI want" +
-                    " to show this demo", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "G4", "\tIn order to give donations\r\n\tAs a church member\r\n\tI want a giving page", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,46 +76,29 @@ namespace giving_tests
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Display Dashboard Page")]
-        [Xunit.TraitAttribute("FeatureTitle", "Giving Demo")]
-        [Xunit.TraitAttribute("Description", "Display Dashboard Page")]
-        [Xunit.TraitAttribute("Category", "Demoscenarios")]
-        public virtual void DisplayDashboardPage()
+        [Xunit.FactAttribute(DisplayName="Basic Giving Scenario")]
+        [Xunit.TraitAttribute("FeatureTitle", "G4")]
+        [Xunit.TraitAttribute("Description", "Basic Giving Scenario")]
+        [Xunit.TraitAttribute("Category", "g4givingscenarios")]
+        public virtual void BasicGivingScenario()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display Dashboard Page", null, new string[] {
-                        "Demoscenarios"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Basic Giving Scenario", null, new string[] {
+                        "g4givingscenarios"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 8
- testRunner.Given("I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the THENCAMPUS giving page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.And("I have entered my login information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I select MISSIONS from the fund drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.When("I press login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I enter 1.00 into the amount", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
- testRunner.Then("I should be on the dashboard screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Failed login")]
-        [Xunit.TraitAttribute("FeatureTitle", "Giving Demo")]
-        [Xunit.TraitAttribute("Description", "Failed login")]
-        public virtual void FailedLogin()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failed login", null, ((string[])(null)));
+ testRunner.And("I fill out the credit card information with a test card", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.And("I press submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 14
- testRunner.Given("I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 15
- testRunner.And("I have entered \"badlogin@badlxxxogin.com\" for a userid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
- testRunner.When("I press login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
- testRunner.Then("I should get a failed login message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see a successful transaction message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -128,12 +110,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                GivingDemoFeature.FeatureSetup();
+                G4Feature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                GivingDemoFeature.FeatureTearDown();
+                G4Feature.FeatureTearDown();
             }
         }
     }
