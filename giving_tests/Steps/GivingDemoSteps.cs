@@ -1,10 +1,10 @@
-﻿using System;
-using TechTalk.SpecFlow;
+﻿using giving_tests.Pages;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using TechTalk.SpecFlow;
 using Xunit;
 
-namespace giving_tests
+namespace giving_tests.Steps
 {
     [Binding]
     public class GivingDemoSteps

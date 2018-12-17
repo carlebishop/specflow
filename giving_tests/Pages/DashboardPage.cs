@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace giving_tests
+namespace giving_tests.Pages
 {
     public class DashboardPage
     {

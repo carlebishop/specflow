@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
-namespace giving_tests
+namespace giving_tests.Steps
 {
     [Binding]
     public class CustomTransforms

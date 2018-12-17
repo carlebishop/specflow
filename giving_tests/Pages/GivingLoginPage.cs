@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 
-namespace giving_tests
+namespace giving_tests.Pages
 {
     public class GivingLoginPage
     {

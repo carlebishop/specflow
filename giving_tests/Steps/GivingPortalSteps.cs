@@ -1,14 +1,11 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using giving_tests.Pages;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Assist;
 using Xunit;
 
-namespace giving_tests
+namespace giving_tests.Steps
 {
     [Binding]
     public class GivingPortalSteps
